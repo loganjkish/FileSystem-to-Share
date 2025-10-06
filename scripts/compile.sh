@@ -10,7 +10,10 @@ cd ..
 
 mkdir ./temp
 cp ./dist/config.json ./temp
-cp -r ./dist/fsts-setupFiles ./temp/fsts-setupFiles
+mkdir ./temp/fsts-setupFiles
+cp ./scripts/windows.bat ./temp/fsts-setupFiles/windows.bat
+cp ./scripts/linux.sh ./temp/fsts-setupFiles/linux.sh
+cp ./scripts/mac.sh ./temp/fsts-setupFiles/mac.sh
 cp ./src/fsts_main.py ./temp/fsts_main.py
 cp -r ./static ./temp/static
 cp ./LICENSE ./temp/LICENSE

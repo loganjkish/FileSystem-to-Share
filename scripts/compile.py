@@ -7,9 +7,9 @@ htdocs_src = os.path.join(os.path.dirname(dir_browser.__file__), "htdocs")
 pyinstaller.run([
     "../src/fsts_main.py",
     "--onefile",
-    "--add-data", "../dist/fsts-setupFiles/windows.bat:fsts-setupFiles",
-    "--add-data", "../dist/fsts-setupFiles/linux.sh:fsts-setupFiles",
-    "--add-data", "../dist/fsts-setupFiles/mac.sh:fsts-setupFiles",
+    "--add-data", "../scripts/windows.bat:fsts-setupFiles",
+    "--add-data", "../scripts/linux.sh:fsts-setupFiles",
+    "--add-data", "../scripts/mac.sh:fsts-setupFiles",
     "--add-data", "../static/setup_windows.html:static",
     "--add-data", "../static/setup_unix.html:static",
     "--add-data", f"{htdocs_src}:wsgidav/dir_browser/htdocs",

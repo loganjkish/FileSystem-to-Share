@@ -1,7 +1,4 @@
 @echo off
-powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('<WebDAV-Server-URL>/setup_download?os=windows&drive_letter=<DriveLetter>&format=ps1'))"
-
-@echo off
 powershell -NoProfile -Command "Start-Process powershell -ArgumentList '-NoProfile -Command \"Start-Service WebClient -ErrorAction SilentlyContinue; Set-Service WebClient -StartupType Automatic\"' -Verb RunAs"
 
 set /p USERNAME=Enter username:
