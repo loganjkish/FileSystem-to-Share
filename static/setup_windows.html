@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FSTS Setup</title>
+        <style>
+            body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding: 20px; }
+            label { display: block; margin: 12px 0 6px; font-weight: 600; }
+            select { font-size: 1rem; padding: 6px 8px; }
+            #selected { margin-top: 10px; color: #333; }
+        </style>
+    </head>
+    <body>
+        <h1>Setup FSTS on your device!</h1>
+
+        <label for="drive-letter">Drive letter</label>
+        <select id="drive-letter" name="drive_letter" aria-label="Select drive letter">
+            <option value="">-- Select a drive letter --</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+            <option value="K">K</option>
+            <option value="L">L</option>
+            <option value="M">M</option>
+            <option value="N">N</option>
+            <option value="O">O</option>
+            <option value="P">P</option>
+            <option value="Q">Q</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+            <option value="T">T</option>
+            <option value="U">U</option>
+            <option value="V">V</option>
+            <option value="W">W</option>
+            <option value="X">X</option>
+            <option value="Y">Y</option>
+            <option value="Z">Z</option>
+        </select>
+
+        <button id="confirm-button" style="margin-top: 20px; padding: 10px 15px; font-size: 1rem;">Confirm</button>
+
+        <script>
+            document.getElementById('confirm-button').addEventListener('click', function() {
+                const select = document.getElementById('drive-letter');
+                const selectedValue = select.value;
+                if (selectedValue) {
+                    const a = document.createElement('a');
+                    a.href = `/setup_download?os=windows&drive_letter=${selectedValue}`;
+                    a.download;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                } else {
+                    alert('Please select a drive letter before confirming.');
+                }
+            });
+        </script>
+    </body>
+</html>
