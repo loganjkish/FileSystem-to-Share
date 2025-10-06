@@ -1,4 +1,4 @@
-# FSTS - FileSystem to Share!
+# FileSystem to Share! (FSTS)
 ### *Ever wanted to share a file, but it is too big for Discord and E-mail is being a pain?*
 Well fear no longer! FSTS acts like a shared drive between you and your friends, so you can all upload and download files to and from it!
 
@@ -61,6 +61,9 @@ Since pyinstaller can't cross compile, and I do not have a Mac, I cannot precomp
 python -m pip install -r requirements.txt
 python fsts_main.py
 ```
+
+### Joining the FileSystem
+Opening the website hosted at [YOURIP]:8080, a website will appear asking you to input where you want the drive to be mounted. (Drive letter for Windows, mount point for Linux/Mac.) Hitting confirm will download a script the user can run to automatically set up the server at that drive letter/mount point!
 
 ## Acknowledgements
 - [Copyparty](https://github.com/9001/copyparty) for inspiring me to make this!
